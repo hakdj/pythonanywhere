@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+ </head>
+<style>
+    .answer{display:none;}
+
+</style>
+<body>
+    <div class="search-recipe" id="allRecipe">
+		<div class="accordion">
+                <h1 class="question">All Recipe</h1>
+                <div class="answer">
+                    <input type="password" placeholder="검색어를 입력하세요">
+                    <input type="submit" value="click" style="font-size:1rem;font-family: 'Merriweather';">
+			</div>
+		</div>
+	</div>
+    <script>
+         $('.question').click(function(){
+            $(this).next().slideToggle();
+            $(this).next().siblings('.answer').slideUp();
+         });
+    </script>
+</body>
+
+
+</html>
